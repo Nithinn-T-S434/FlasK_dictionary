@@ -1,0 +1,14 @@
+{% extends 'layouts.html'%}
+{%block content%}
+<div class = "center"><div class = "Wrapper">
+    <form action="{{url_for('Dictionary_Page')}}" method="post">
+    <h2>English dictionary</h2>
+    <header>{{dictionary.word.label}} {{dictionary.word}}</header>
+        <br>
+        <header>{{dictionary.button}}</header>
+    <br><br>
+    <header>{{meaning}}</header>
+    <p>{{word}}</p>
+    </form>
+</div></div>
+{%endblock content%}
