@@ -1,7 +1,5 @@
 body{
 align-items: center;
-justify-content: center;
-min-height: 100vh;
 background: white
 }
 
@@ -25,12 +23,7 @@ font-size:28-px;
 font-weight: 500px;
 text-align:center;
 }
-.child{
-display:flex;}
-.middle{
-background:white
-display:flex
-}
+
 .middle h1{
   text-align: center;
   text-transform: uppercase;

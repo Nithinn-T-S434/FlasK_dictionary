@@ -1,4 +1,4 @@
-import flask
+
 import requests
 from pprint import pprint
 from flask.views import MethodView
@@ -56,15 +56,10 @@ class About_Page(MethodView):
         return render_template("About.html")
 
 
-class Calculater_Page(MethodView):
-    def get(self):
-        return render_template("calculater.html")
-
 
 M = Meaning_of_Word("word")
 pprint(M.get())
 app.add_url_rule('/', view_func=Home_Page.as_view('Home_Page'))
 app.add_url_rule('/dict', view_func=Dictionary_Page.as_view('Dictionary_Page'))
 app.add_url_rule('/about', view_func=About_Page.as_view('About_Page'))
-app.add_url_rule('/calc', view_func=Calculater_Page.as_view('Calculater_Page'))
 app.run(host='0.0.0.0', port=5000)

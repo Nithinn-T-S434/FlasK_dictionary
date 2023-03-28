@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <!Bootstrap 5 css!>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}"
@@ -10,6 +10,16 @@
             position:absolute;
             top:30%;
             left:30%;
+            <! border: 3px solid #73AD21; !>
+            padding: 10px;
+            }
+    </style>
+    <style>
+        .side{
+
+            position:absolute;
+            top:10%;
+            left:10%;
             <! border: 3px solid #73AD21; !>
             padding: 10px;
             }
@@ -30,16 +40,23 @@
         <li class="nav-item">
           <a class="nav-link" href="{{url_for('Dictionary_Page')}}">Dictionary</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('Calculater_Page')}}">Calculater</a>
-        </li>
          <li class="nav-item">
-          <a class="nav-link" href="{{url_for('About_Page')}}">About</a>
+          <a class="nav-link" href="{{url_for('About_Page')}}">About@me</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+    <style>
+    #About {
+    border : 2px solid black;
+    padding :25px;
+    background: url("https://cdn.worldvectorlogo.com/logos/devops-2.svg");opacity:0.5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:1000px;
+    }
+    </style>
 </head>
 <body>
 {%block content%}
