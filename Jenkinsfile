@@ -9,7 +9,7 @@ pipeline {
             agent any
             steps {
                 script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    sh docker build --tag flask_dictionary
                 }
             }
         }
