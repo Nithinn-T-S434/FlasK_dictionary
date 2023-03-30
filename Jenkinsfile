@@ -9,7 +9,7 @@ pipeline {
             agent any
             steps {
                 script {
-                    sh docker build --tag flask_dictionary
+                sh 'docker build -< Dockerfile'
                 }
             }
         }
