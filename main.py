@@ -1,6 +1,4 @@
-
 import requests
-from pprint import pprint
 from flask.views import MethodView
 from wtforms import Form, SubmitField, StringField
 from flask import render_template, Flask, request
@@ -56,9 +54,6 @@ class About_Page(MethodView):
         return render_template("About.html")
 
 
-
-M = Meaning_of_Word("word")
-pprint(M.get())
 app.add_url_rule('/', view_func=Home_Page.as_view('Home_Page'))
 app.add_url_rule('/dict', view_func=Dictionary_Page.as_view('Dictionary_Page'))
 app.add_url_rule('/about', view_func=About_Page.as_view('About_Page'))
