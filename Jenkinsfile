@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = 'jenk_deneme/ml_model'
+        registry = 'FlasK_dictionary'
         dockerImage = ''
     }
     agent any

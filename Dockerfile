@@ -17,7 +17,7 @@ RUN yum-get update \
 RUN pip install --no-cache-dir --upgrade pip
 
 # set work directory
-WORKDIR /src/app
+WORKDIR /src/main
 
 # copy requirements.txt
 COPY ./requirements.txt /src/app/requirements.txt
