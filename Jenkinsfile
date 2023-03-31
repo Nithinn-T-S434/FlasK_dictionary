@@ -4,7 +4,6 @@ pipeline {
 		stage('Updating the repository'){
 			steps{
 				// Updating the repo on target system
-				script{
 					withCredentials([usernamePassword(credentialsId:'7a5d9eb6-de84-4a60-a4fa-9afb1c84c893',passwordVariable: 'GIT_PASSWORD',usernameVariable:'GIT_USERNAME')]){
 						sh 'cd /FlasK_Dictionary'
 						git banch: 'main',
@@ -20,7 +19,6 @@ pipeline {
 			}
 			steps{
 				// Build and test the flask appwith the source code from github
-				script{
 					sh '''
 						cd /FlasK_Dictionary
 						RUN pip3 install -r requirements.txt
@@ -28,9 +26,7 @@ pipeline {
 						'''
 				}
 			}
-		}
 		stage('Running the image'){
-			steps{
 				// Build and test the flask appwith the source code from github
 				script{
 					sh '''
@@ -40,8 +36,4 @@ pipeline {
 				}
 			}
 		}
-		
-		}
-	}
-}	
-    
+}
