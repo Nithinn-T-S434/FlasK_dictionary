@@ -10,6 +10,7 @@ pipeline {
 								cd ..
 								pwd
 								cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
+								pwd
 								git pull origin main
 								'''
 						}
