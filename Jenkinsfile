@@ -6,7 +6,7 @@ pipeline {
 				// Updating the repo on target system
 					withCredentials([usernamePassword(credentialsId:'7a5d9eb6-de84-4a60-a4fa-9afb1c84c893',passwordVariable: 'GIT_PASSWORD',usernameVariable:'GIT_USERNAME')]){
 						sh '''
-						cd '/home/ec2-user/FlasK_dictionary'
+						cd '~/FlasK_dictionary'
 						git branch: 'main',
 							credentialsId:'7a5d9eb6-de84-4a60-a4fa-9afb1c84c893',
 							url:'https://github.com/Nithinn-T-S434/FlasK_dictionary.git'
