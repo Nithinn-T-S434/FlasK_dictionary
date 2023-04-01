@@ -9,7 +9,7 @@ pipeline {
 								pwd
 								cd ..
 								pwd
-								git pull
+								git pull origin main
 								'''
 						}
 				}
