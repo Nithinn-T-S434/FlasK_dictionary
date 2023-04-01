@@ -5,7 +5,7 @@ pipeline {
 			steps{
 				// Updating the repo on target system
 						dir("folder"){
-							sh "pwd"
+							sh "pwd" && sh cd .. && sh "pwd"
 						}
 				}
 			}
