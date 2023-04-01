@@ -23,8 +23,9 @@ pipeline {
 			steps{
 				// Build and test the flask appwith the source code from github
 					sh '''
-						cd '/home/ec2-user/FlasK_dictionary'
+						cd ..
 						RUN pip3 install -r requirements.txt
+						cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
 						docker build -t Flask_Dictionary
 						'''
 				}
