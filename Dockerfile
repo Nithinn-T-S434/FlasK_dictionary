@@ -7,6 +7,6 @@ COPY . .
 COPY templates/ /app/templates/
 COPY static/ /app/static/
 ENV FLASK_APP=main.py
-ENV FLASK_ENV=mproduction
+ENV FLASK_ENV=production
 EXPOSE 3000
 CMD ./main.py
