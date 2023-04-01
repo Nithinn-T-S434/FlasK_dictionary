@@ -9,7 +9,6 @@ pipeline {
 						}
 				}
 			}
-		}
 		stage('Docker Image generation'){
 			agent {
 				dockerfile true
