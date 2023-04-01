@@ -27,7 +27,7 @@ pipeline {
 						RUN pip3 install -r requirements.txt
 						cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
 						sudo usermod -a -G docker jenkins
-						docker.image('flaskdictionary:0.1')
+						sudo docker.image('flaskdictionary:0.1')
 						'''
 				}
 			}
