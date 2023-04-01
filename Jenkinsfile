@@ -9,6 +9,7 @@ pipeline {
 								pwd
 								cd ..
 								pwd
+								cd ~/FlasK_dictionary
 								git pull origin main
 								'''
 						}
