@@ -27,6 +27,7 @@ pipeline {
 				}
 			}
 		stage('Running the image'){
+			steps{
 				// Build and test the flask appwith the source code from github
 					sh '''
 						cd /Flask_Dictionary
@@ -34,4 +35,5 @@ pipeline {
 						'''
 			}
 		}
+	}
 }
