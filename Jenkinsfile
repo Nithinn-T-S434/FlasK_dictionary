@@ -7,6 +7,7 @@ pipeline {
 						dir("folder"){
 							sh '''
 								pwd
+								cd ..
 								'''
 						}
 				}
