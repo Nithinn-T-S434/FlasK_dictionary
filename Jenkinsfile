@@ -9,6 +9,7 @@ pipeline {
 								pwd
 								cd ..
 								pwd
+								git pull
 								'''
 						}
 				}
