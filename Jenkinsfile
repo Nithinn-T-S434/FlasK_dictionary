@@ -26,7 +26,7 @@ pipeline {
 						cd ..
 						RUN pip3 install -r requirements.txt
 						cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
-						docker build -t Flask_Dictionary
+						sudo docker build -t Flask_Dictionary
 						'''
 				}
 			}
