@@ -1,12 +1,13 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu
+FROM python:3-alpine
+COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-COPY . .
-COPY templates/ /app/templates/
-COPY static/ /app/static/
-ENV FLASK_APP=main.py
-ENV FLASK_ENV=production
+RUN pip install -r requirements.txt
+COPY . /app
 EXPOSE 3000
-CMD ./main.py
+ENTRYPOINT [ "python" ]
+#COPY templates/ /app/templates/
+#COPY static/ /app/static/
+#ENV FLASK_APP=main.py
+#ENV FLASK_ENV=production
+CMD ["main.py"]
