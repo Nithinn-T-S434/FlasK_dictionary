@@ -22,6 +22,6 @@ pipeline {
 				dir("folder"){
 					sh 'docker image build -t  app .'
 				}
-		}
+		}	}	
 	}
 }
