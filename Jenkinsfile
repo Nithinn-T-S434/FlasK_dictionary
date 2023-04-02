@@ -27,8 +27,8 @@ pipeline {
 						RUN pip3 install -r requirements.txt
 						cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
 						sudo usermod -a -G docker jenkins
-						docker image build -t  app .
 						'''
+					sh 'docker image build -t  app .'
 				}
 			}
 		stage('Running the image'){
