@@ -27,7 +27,7 @@ pipeline {
 						RUN pip3 install -r requirements.txt
 						cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
 						sudo usermod -a -G docker jenkins
-						sudo docker.image('flaskdictionary:0.1')
+						docker image build -t  app .
 						'''
 				}
 			}
@@ -36,7 +36,7 @@ pipeline {
 				// Build and test the flask appwith the source code from github
 					sh '''
 						cd '/home/ec2-user/FlasK_dictionary'
-						docker run Flask_Dictionay -d -p 3000:3000 FlasK_Dictionary
+						docker run -p 3000:3000 -d app
 						'''
 			}
 		}
