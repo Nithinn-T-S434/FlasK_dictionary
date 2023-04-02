@@ -19,9 +19,8 @@ pipeline {
 		stage('Docker Image generation'){
 			steps{
 				// Build and test the flask appwith the source code from github\
-				dir("folder"){
 					sh 'docker image build -t  app .'
-				}
 		}	}	
 	}
 }
+
