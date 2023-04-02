@@ -7,5 +7,4 @@ RUN pip install --upgrade pip &&\
     pip install --upgrade setuptools &&\
     pip install ez_setup &&\
     pip install -r requirements.txt
-EXPOSE 3000
 CMD ["python3","main.py"]
