@@ -22,10 +22,11 @@ pipeline {
 				sh 'docker image build -t  app .'
 		
 			}	
+		}
 		stage('Docker Image containerization'){
 			steps{
 				// Build and test the flask appwith the source code from github\
-				sh 'docker run -p 3000:3000 -d app'
+				sh 'docker run -p 3000:3000 -d app '
 		
 			}	
 		
