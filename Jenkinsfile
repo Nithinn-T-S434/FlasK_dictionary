@@ -28,7 +28,7 @@ pipeline {
 		stage('Docker Image containerization'){
 			steps{
 				// Build and test the flask appwith the source code from github\
-				sh 'docker-compose up -d --build --scale Flask_dictionary=5'
+				sh 'docker-compose up -d --build --scale flask_dictionary=5'
 			}	
 		}	
 	}
