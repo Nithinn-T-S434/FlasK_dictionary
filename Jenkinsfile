@@ -16,9 +16,20 @@ pipeline {
 						}
 				}
 			}
+		stage('initializing the container'){
+			steps{
+				//making port 5000 available if occupied
+				sh'''
+					doker rmi app
+					docker stop Flask_dictionary
+					docker system prune
+					'''
+			}
+		}
 		stage('Docker Image generation'){
 			steps{
-				// Build and test the flask appwith the source code from github\
+				// Build and test the flask app with the source code from github\
+				// . represents the path as dockerfile is availabe in the same path . is mentioned 
 				sh 'docker image build -t  app .'
 		
 			}	
@@ -26,10 +37,8 @@ pipeline {
 		stage('Docker Image containerization'){
 			steps{
 				// Build and test the flask appwith the source code from github\
-				sh 'docker run -p 5000:5000 -d app'
-		
+				sh 'docker-compose up -d --build --scale Flask_dictionary=5'
 			}	
-		
 		}	
 	}
 }	
