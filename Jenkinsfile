@@ -20,7 +20,7 @@ pipeline {
 			steps{
 				//making port 5000 available if occupied
 				sh'''
-					doker rmi app
+					docker rmi app
 					docker stop Flask_dictionary
 					docker system prune
 					'''
