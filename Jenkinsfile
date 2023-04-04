@@ -16,16 +16,7 @@ pipeline {
 						}
 				}
 			}
-		stage('initializing the container'){
-			steps{
-				//making port 5000 available if occupied
-				sh'''
-					docker rmi app
-					docker stop Flask_dictionary
-					docker system prune
-					'''
-			}
-		}
+	
 		stage('Docker Image generation'){
 			steps{
 				// Build and test the flask app with the source code from github\
