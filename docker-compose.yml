@@ -9,7 +9,7 @@ services:
 
   nginx:
     image: nginx.latest
-    volume:
+    volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depents_on:
       - Flask_dictionary
