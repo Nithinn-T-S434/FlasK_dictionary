@@ -6,6 +6,7 @@ background: white
 .Wrapper{
 font-size:12px
 display:flex;
+position:fixed;
 justify-content: center;
 width:420px;
 background:#b4d46a;

@@ -55,6 +55,6 @@ class About_Page(MethodView):
 
 
 app.add_url_rule('/', view_func=Home_Page.as_view('Home_Page'))
-app.add_url_rule('/dict', view_func=Dictionary_Page.as_view('Dictionary_Page'))
+app.add_url_rule('/dictionary', view_func=Dictionary_Page.as_view('Dictionary_Page'))
 app.add_url_rule('/about', view_func=About_Page.as_view('About_Page'))
 app.run(host='0.0.0.0', port=5000)
