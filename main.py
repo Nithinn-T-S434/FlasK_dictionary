@@ -1,8 +1,8 @@
 import requests
+from flask import render_template, Flask, request
 from flask.views import MethodView
 from wtforms import Form, SubmitField, StringField
-from flask import render_template, Flask, request
-
+import socket
 app = Flask(__name__, template_folder='templates')
 
 
@@ -24,7 +24,8 @@ class Meaning_of_Word:
 
 class Home_Page(MethodView):
     def get(self):
-        return render_template('index.html')
+        socketid =socket.gethostname()
+        return render_template('index.html', socket_Id=socketid)
 
 
 class Dictionary_Page(MethodView):
