@@ -17,6 +17,9 @@ class Meaning_of_Word:
             content = response.json()
             x = content[0]['meanings'][0]['definitions'][00]['definition']
             return x
+        except ValueError:
+            x = "Word not found"
+            return x
         except KeyError:
             x = "Word not found"
             return x
@@ -53,9 +56,13 @@ class Dictionary(Form):
 class About_Page(MethodView):
     def get(self):
         return render_template("About.html")
+class Logo_Page(MethodView):
+    def get(self):
+        return render_template("Logo.html")
 
 
 app.add_url_rule('/', view_func=Home_Page.as_view('Home_Page'))
 app.add_url_rule('/dictionary', view_func=Dictionary_Page.as_view('Dictionary_Page'))
 app.add_url_rule('/about', view_func=About_Page.as_view('About_Page'))
+app.add_url_rule('/logo', view_func=Logo_Page.as_view('Logo_Page'))
 app.run(host='0.0.0.0', port=5000)

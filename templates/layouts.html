@@ -28,7 +28,7 @@
     <title>Title</title>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">DevOps</a>
+    <a class="navbar-brand" href="{{url_for('Logo_Page')}}">DevOps</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,7 +51,7 @@
     #About {
     border : 2px ;
     padding :25px;
-    background: url("https://cdn.worldvectorlogo.com/logos/devops-2.svg");opacity:0.5;
+    background: url("{{url_for('static', filename='devops-2.svg')}}");opacity:0.6;
     background-repeat: no-repeat;
     background-size: auto;
     background-attachment: fixed;
