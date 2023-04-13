@@ -20,7 +20,9 @@ pipeline {
 		stage('Docker Image generation'){
 			steps{
 				// Build and test the flask app with the source code from github\
-				// . represents the path as dockerfile is availabe in the same path . is mentioned 
+				// . represents the path as dockerfile is availabe in the same path . is mentioned
+				sh 'docker image prune'
+				sh 'docker container prune'
 				sh 'docker image build -t  app .'
 		
 			}	
