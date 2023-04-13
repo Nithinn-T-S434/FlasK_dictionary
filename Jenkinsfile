@@ -34,10 +34,8 @@ pipeline {
 		stage('Removing dangled images and stopped containers'){
 			steps{
 				//
-				sh '''
-				    docker container prune
-				    docker image prune -a
-				    '''
+				sh 'docker container prune'
+	            sh 'docker image prune -a'
 			}	}
 	}
 }	
