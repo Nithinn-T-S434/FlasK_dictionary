@@ -31,13 +31,7 @@ pipeline {
 				sh 'docker-compose up -d --build --scale flask_dictionary=3'
 			}
 		}
-		stage('Removing dangled images and stopped containers'){
-			steps{
-				//
-				sh 'docker container prune'
-	            sh 'docker image prune -a'
-            }
-        }
+
 	}
 }	
 
