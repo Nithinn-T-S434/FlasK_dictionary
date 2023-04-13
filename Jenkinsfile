@@ -22,7 +22,6 @@ pipeline {
 				// Build and test the flask app with the source code from github\
 				// . represents the path as dockerfile is availabe in the same path . is mentioned
 				sh 'docker image prune'
-				sh 'docker container prune'
 				sh 'docker image build -t  app .'
 		
 			}	
@@ -31,6 +30,7 @@ pipeline {
 			steps{
 				// Build and test the flask appwith the source code from github\
 				sh 'docker-compose up -d --build --scale flask_dictionary=3'
+				sh 'docker container prune'
 			}	
 		}	
 	}
