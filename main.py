@@ -44,7 +44,7 @@ class Dictionary_Page(MethodView):
         if Meaning != "Word not found":
             return render_template('dictionary.html', meaning="meaning", dictionary=the_word, word=Meaning)
         else:
-            Meaning = 'Not found,Please check the word and try again'
+            Meaning = 'Oops !! Not found,Please check the word and try again'
             return render_template('dictionary.html', dictionary=the_word, word=Meaning)
 
 
