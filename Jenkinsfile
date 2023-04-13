@@ -36,7 +36,8 @@ pipeline {
 				//
 				sh 'docker container prune'
 	            sh 'docker image prune -a'
-			}	}
+            }
+        }
 	}
 }	
 
