@@ -31,6 +31,12 @@ pipeline {
 				sh 'docker-compose up -d --build --scale flask_dictionary=3'
 			}
 		}
+		stage('removing stopped containerd'){
+			steps{
+				// Docker image containerization from the docker compose Yaml file
+				sh 'docker container prune'
+			}
+		}
 
 	}
 }	
