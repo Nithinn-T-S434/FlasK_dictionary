@@ -26,7 +26,7 @@ pipeline {
 		}
 		stage('removing stopped containerd'){
 			steps{
-				// Docker image containerization from the docker compose Yaml file
+				// removing stopped containers
 				sh 'docker container prune'
 			}
 		}
