@@ -5,14 +5,7 @@ pipeline {
 			steps{
 				// Updating the repo on target system
 						dir("folder"){
-							sh '''
-								pwd
-								cd ..
-								pwd
-								cd /var/lib/jenkins/workspace/FlasK_Dictionary/folder
-								pwd
-								git pull origin main
-								'''
+							sh 'git pull origin main'
 						}
 				}
 			}
